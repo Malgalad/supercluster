@@ -458,18 +458,18 @@ function getClusterProperties(data, i, clusterProps) {
   });
 }
 
-// longitude/latitude to CRS for 16kx16k map in [0..1] range
+// assuming coords are already in [0..1] range
 function lngX(lng) {
-  return lng / 16_000 + 0.5;
+  return lng;
 }
 function latY(lat) {
-  return lat / 16_000 + 0.5;
+  return lat;
 }
 
 // CRS to longitude/latitude
 function xLng(x) {
-  return (x - 0.5) * 16_000;
+  return x;
 }
 function yLat(y) {
-  return (y - 0.5) * 16_000;
+  return y;
 }
